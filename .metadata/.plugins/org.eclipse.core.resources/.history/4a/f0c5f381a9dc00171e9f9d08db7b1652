@@ -1,0 +1,51 @@
+package puzzle17;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class Main {
+	
+	static class Group{
+		int score;
+		ArrayList<Group> nestedGroups;
+	}
+	
+	public static ArrayList<Group> rootGroups;
+
+	public static void main(String[] args) {
+		try{
+			BufferedReader input = new BufferedReader(new FileReader("input.txt"));
+			char nextChar;
+			Group newGroup;
+			while ((nextChar = (char)input.read()) != -1){
+				if (nextChar == '!'){
+					input.read();
+				}
+				if (nextChar == '<'){
+					discardGarbage(input);
+				}
+				if (nextChar == '{'){
+					
+				}
+			}
+		}
+		catch (IOException ex){
+			System.out.println(ex);
+		}
+	}
+	
+	private static void discardGarbage(BufferedReader input) throws IOException{
+		char nextChar;
+		while ((nextChar = (char)input.read()) != -1){
+			if (nextChar == '!'){
+				input.read();
+			}
+			if (nextChar == '>'){
+				return;
+			}
+		}
+	}
+
+}

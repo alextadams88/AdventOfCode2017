@@ -1,0 +1,19 @@
+INDEX VERSION 1.129+D:\Class\Advent of Code 2017\AdventOfCode2017\.metadata\.plugins\org.eclipse.jdt.core
+2799462519.index
+951647700.index
+2819088453.index
+2170225055.index
+2712775790.index
+1636755585.index
+1748542634.index
+1867866291.index
+378132503.index
+4046583056.index
+1070938573.index
+3520813281.index
+3602291960.index
+1337969986.index
+524260412.index
+2251736454.index
+1221724507.index
+4133237001.index
