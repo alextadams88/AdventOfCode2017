@@ -1,4 +1,4 @@
-package puzzle18;
+package puzzle17;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -19,11 +19,9 @@ public class Main {
 	
 	public static ArrayList<Group> rootGroups;
 	public static int totalScore;
-	public static int garbageCount;
 
 	public static void main(String[] args) {
 		totalScore = 0;
-		garbageCount = 0;
 		rootGroups = new ArrayList<Group>();
 		try{
 			BufferedReader input = new BufferedReader(new FileReader("input.txt"));
@@ -44,7 +42,6 @@ public class Main {
 				}
 			}
 			System.out.println(totalScore);
-			System.out.println(garbageCount);
 		}
 		catch (IOException ex){
 			System.out.println(ex);
@@ -57,18 +54,15 @@ public class Main {
 			if (nextChar == '!'){
 				input.read();
 			}
-			else if (nextChar == '>'){
+			if (nextChar == '>'){
 				return;
-			}
-			else {
-				garbageCount++;
 			}
 		}
 	}
 	
 	private static void processGroup(Group rootGroup, BufferedReader input) throws IOException{
 		char nextChar;
-		while ((nextChar = (char)input.read()) != 65535){
+		while ((nextChar = (char)input.read()) != -1){
 			if (nextChar == '!'){
 				input.read();
 			}

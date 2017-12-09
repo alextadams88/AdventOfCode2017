@@ -68,7 +68,7 @@ public class Main {
 	
 	private static void processGroup(Group rootGroup, BufferedReader input) throws IOException{
 		char nextChar;
-		while ((nextChar = (char)input.read()) != 65535){
+		while ((nextChar = (char)input.read()) != -1){
 			if (nextChar == '!'){
 				input.read();
 			}

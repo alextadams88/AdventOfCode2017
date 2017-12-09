@@ -50,7 +50,7 @@ public class Main {
 	
 	private static void discardGarbage(BufferedReader input) throws IOException{
 		char nextChar;
-		while ((nextChar = (char)input.read()) != -1){
+		while ((nextChar = (char)input.read()) != 65535){
 			if (nextChar == '!'){
 				input.read();
 			}
@@ -62,7 +62,7 @@ public class Main {
 	
 	private static void processGroup(Group rootGroup, BufferedReader input) throws IOException{
 		char nextChar;
-		while ((nextChar = (char)input.read()) != -1){
+		while ((nextChar = (char)input.read()) != 65535){
 			if (nextChar == '!'){
 				input.read();
 			}
